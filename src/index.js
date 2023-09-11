@@ -26,7 +26,8 @@ fetchBreeds()
     });
   })
   .catch(() => {
-    Notify.failure(errorMsg.textContent, {position: 'center-center', width: '400px'});
+    Notify.failure(errorMsg.textContent, { position: 'center-center', width: '400px' });
+    breedsMenu.innerHTML = '';
   });
 
 
