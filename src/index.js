@@ -26,7 +26,6 @@ fetchBreeds()
     });
   })
   .catch(() => {
-    breedsMenu.innerHTML = '';
     Notify.failure(errorMsg.textContent, { position: 'center-center', width: '400px' });
   });
 
@@ -53,5 +52,6 @@ function onSelectBreed() {
     
     .catch(() => {
       Notify.failure(errorMsg.textContent, { position: 'center-center', width: '400px' });
+      catInfo.innerHTML = '';
     });
 };
